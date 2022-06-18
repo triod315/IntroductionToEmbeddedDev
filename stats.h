@@ -1,43 +1,81 @@
-/******************************************************************************
- * Copyright (C) 2017 by Alex Fosdick - University of Colorado
- *
- * Redistribution, modification or use of this software in source or binary
- * forms is permitted as long as the files maintain this copyright. Users are 
- * permitted to modify this and use it to learn about the field of embedded
- * software. Alex Fosdick and the University of Colorado are not liable for any
- * misuse of this material. 
- *
- *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.h
+ * @brief This file contains the declaration of the functions for the statistics.
  *
- * <Add Extended Description Here>
- *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author Oleksandr Hryshchuk 
+ * @date June 18, 2022  
  *
  */
+#ifndef __STATS_H__
+#define __STATS_H__
 
+/**
+ * @brief Prints the statistics of an array including minimum, maximum, mean, and median to stdout.
+ * 
+ * @param array_ptr Pointer to the first element of the array.
+ * @param array_size Size of the array.
+ *
+ */
+void print_statistics(unsigned char* array_ptr, size_t array_size);
 
+/**
+ * @brief Prints elements of an array to stdout.
+ * 
+ * @param array_ptr Pointer to the first element of the array.
+ * @param array_size Size of the array.
+ */
+void print_array(unsigned char* array_ptr, size_t array_size);
 
-#include <stdio.h>
-#include "stats.h"
+/**
+ * @brief Finds the median value of an array.
+ * 
+ * @param array_ptr Pointer to the first element of the array.
+ * @param array_size Size of the array.
+ * @return unsigned char The median value of the array. 
+ */
+unsigned char find_median(unsigned char* array_ptr, size_t array_size);
 
-/* Size of the Data Set */
-#define SIZE (40)
+/**
+ * @brief Prints elements of an array to stdout. Sorts the array from largest to smallest.
+ * 
+ * @param array_ptr Pointer to the first element of the array.
+ * @param array_size Size of the array.
+ */
+void sort_array(unsigned char* array_ptr, size_t array_size);
 
-void main() {
+/**
+ * @brief Finds the mean of an array.
+ * 
+ * @param array_ptr Pointer to the first element of the array.
+ * @param array_size Size of the array.
+ * @return unsigned char 
+ */
+unsigned char find_mean(unsigned char* array_ptr, size_t array_size);
 
-  unsigned char test[SIZE] = { 34, 201, 190, 154,   8, 194,   2,   6,
-                              114, 88,   45,  76, 123,  87,  25,  23,
-                              200, 122, 150, 90,   92,  87, 177, 244,
-                              201,   6,  12,  60,   8,   2,   5,  67,
-                                7,  87, 250, 230,  99,   3, 100,  90};
+/**
+ * @brief Prints elements of an array to stdout. Sorts the array from largest to smallest.
+ * 
+ * @param array_ptr Pointer to the first element of the array.
+ * @param array_size Size of the array.
+ */
+void sort_array(unsigned char* array_ptr, size_t array_size);
 
-  /* Other Variable Declarations Go Here */
-  /* Statistics and Printing Functions Go Here */
+/**
+ * @brief Finds maximum value in an array.
+ * 
+ * @param array_ptr Pointer to the first element of the array.
+ * @param array_size Size of the array.
+ * @return unsigned char 
+ */
+unsigned char find_maximum(unsigned char* array_ptr, size_t array_size);
 
-}
+/**
+ * @brief Finds minimum value in an array.
+ * 
+ * @param array_ptr Pointer to the first element of the array.
+ * @param array_size Size of the array.
+ * @return unsigned char 
+ */
+unsigned char find_minimum(unsigned char* array_ptr, size_t array_size);
 
-/* Add other Implementation File Code Here */
+#endif /* __STATS_H__ */
