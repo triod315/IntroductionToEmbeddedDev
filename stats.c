@@ -147,6 +147,8 @@ void main() {
 
   /* Other Variable Declarations Go Here */
   /* Statistics and Printing Functions Go Here */
+  sort_array(test, SIZE);
+  print_array(test, SIZE);
   print_statistics(test, SIZE);
 }
 
